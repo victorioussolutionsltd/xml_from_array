@@ -1,23 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { arrayToXml } from "./xmlHelper";
 
 function App() {
+
+  const printXml = () => console.log(arrayToXml({ array: ['1', '2'] }))
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Press button to get xml output in console
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <button onClick={printXml}>Print XML</button>
       </header>
     </div>
   );
